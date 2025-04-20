@@ -1,0 +1,285 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('https://img.freepik.com/premium-vector/pattern-paper-money-coins-various-denominations-seamless-pattern-vector-illustration_528104-958.jpg?w=2000'); /* Replaced with valid image */
+  background-size: cover;
+  background-position: center;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+ h4 {
+  color: rgba(250, 251, 251, 0.7);
+  margin-bottom: 0.9rem;
+  font-size: 0.65cm ;
+}
+ h3 {
+  color: rgb(245, 249, 249, 0.7);
+  margin-bottom: 0.9rem;
+  position: relative;
+  left: 3cm;
+  font-size: 0.65cm ;
+}
+h5{
+  color: rgb(245, 249, 249, 0.7);
+  margin-bottom: 0.9rem;
+  position: relative;
+  left: 5.75cm;
+  font-size: 0.65cm ;
+}
+h2 {
+  background-color: #6e6d7bba;
+  border-color: #000000;
+  border-style: solid;
+ text-align: center;
+  border-radius: 12px;
+  width: 10cm;
+  height: 1.5cm;
+  color: rgba(250, 251, 251, 0.7);
+  margin-bottom: 0.9rem;
+  font-size: 1cm;
+}
+h1 {
+  color: rgb(245, 249, 249, 0.7);
+  margin-bottom: 0.9rem;
+  font-size: 1cm;
+}
+
+.container {
+  display: flex;
+  gap: 2rem;
+  background-color: rgba(8, 8, 8, 0.4); /* semi-transparent white for readability */
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(194, 200, 20, 0.08);
+  padding: 2rem;
+  border-color: #000000;
+border-style: solid;
+  width: 100%;
+  max-width: 900px;
+  flex-wrap: wrap;
+}
+
+.left-panel, .right-panel {
+  flex: 1;
+  min-width: 300px;
+}
+
+#balance {
+  font-size: 2rem;
+  font-weight: italic;
+  margin: 0.5rem 0 1rem;
+}
+
+.inc-exp-container {
+  display: flex;
+  border-color: #000000;
+  border-style: solid;
+  justify-content: space-between;
+  background-color: #6e6d7bbb;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.inc-exp-container > div {
+  flex: 1;
+  text-align: center;
+
+}
+
+.inc-exp-container > div:not(:last-child) {
+  border-right: 10px solid #ccc;
+}
+
+.money-plus {
+  font-weight: 700;
+  font-size: 0.55cm;
+  color: #00ff37 ;
+}
+
+.money-minus {
+  color:rgb(255, 0, 0) ;
+  font-weight: 700;
+  font-size: 0.55cm;
+}
+
+form {
+  margin-top: 1rem;
+
+}
+
+label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+  color: rgba(250, 251, 251, 0.7);
+  font-size: 0.5cm;
+  
+  
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+
+}
+
+.btn {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #6366f1;
+  color: #fff;
+  font-weight: bold;
+  border: solid black;
+  border-radius: 6px;
+  cursor: pointer;
+
+}
+
+.btn:hover {
+  background-color: #4f46e5;
+}
+
+.danger-btn {
+  background-color: #e74c3c;
+  margin-top: 0.5rem;
+}
+
+.danger-btn:hover {
+  background-color: #c0392b;
+}
+
+.list {
+  list-style: none;
+  max-height: 400px;
+  overflow-y: auto;
+  margin-top: 1rem;
+  padding: 0;
+}
+
+.list li {
+  background-color: #fff;
+  border-left: 5px solid;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+  border-radius: 6px;
+}
+
+.list li.plus {
+  border-color: #2ecc71;
+}
+
+.list li.minus {
+  border-color: #e74c3c;
+}
+
+.delete-btn {
+  position: absolute;
+  left: -32px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #e74c3c;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.list li:hover .delete-btn {
+  opacity: 1;
+}
+
+.error-msg {
+  color: #e74c3c;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.HISTORY{
+  background-color: #f1f1f44e;
+border-color: #000000;
+border-style: solid;
+  position: relative;
+  border-radius: 12px;
+  left: 5cm;
+  width: 4.3cm;
+  height: 9.33cm;
+
+
+}
+.A{
+  text-align: center;
+  color: #ffffff;
+  border-color: #000000;
+  border-style: solid;
+  border-width: 0.5px;
+  text-align: center;
+    background-color: #2ecc71;
+    width: 4.1cm;
+    height: 0.6cm;
+    text-align: center;
+    font-weight: 700;
+    border-radius: 10px;
+    margin: 2px;
+}
+.B{
+  border-color: #000000;
+border-style: solid;
+border-width: 0.5px;
+text-align: center;
+background-color: #c0392b;
+  width: 4.1cm;
+  height: 0.6cm;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 700;
+border-radius: 10px;
+margin: 2px;
+}
+
+
+.print{
+  position: relative;
+
+  background-color: #6e6d7bbb;
+  width:40%;
+  padding: 0.75rem;
+  color: #fff;
+  font-weight: bold;
+  border: solid black;
+  border-radius: 6px;
+  cursor: pointer;
+  bottom: -100px;
+  left: 190px;
+  height: 60px;
+
+}
+.print :hover{
+  background-color: #2e2d2d95;
+cursor: pointer;;
+}
+
+.print.abc{
+  bottom: 20px;
+}
+
